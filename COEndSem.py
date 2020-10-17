@@ -92,25 +92,7 @@ if(mapping == 2):
                 cache.remove(cache[0])
                 cache.append([tag,'null'])
 
-        else:
-            adr = input()
-            data = input()
-            blocknumber = int(adr,2) // bsize
-            tag = adr[:len(adr) - blockoffset]
-            tagsize = len(tag)
-            f = True
-            for i in range(0,len(cache)):
-                if(cache[i] == []):
-                    cache[i] = [tag,data]
-                    f = False
-                    break
-                elif(cache[i][0] == tag):
-                    cache[i][1] = data
-                    f = False
-                    break
-            if(f):
-                cache.remove(cache[0])
-                cache.append([tag,data])
+        
 
         print(cache)
 
